@@ -113,3 +113,15 @@ if ($retval = 0) {
 } else {
   #this is the parent
 }
+
+# tie dbm hash
+use AnyDBM_File;
+use Fcntl;
+tie (my %hash, "AnyDBM_File", "/tmp/tmpdbm", O_CREAT|O_RDWR, 0600)
+  or die "Can't open database: $!\n";
+
+# initially blank, but populated on second run
+print ("name in hash is: $hash{'name'}\n");
+$hash{'name'} = "Gilbert";
+print ("name in hash is: $hash{'name'}\n");
+untie %hash;
