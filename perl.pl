@@ -52,6 +52,9 @@ for (my $i = 0; $i <= $#array; $i++) {
 
 # array slices
 @subarray = @array[0..19] # first 20 elements
+@subarray = @array[4,1,3] # 3 of the elements pulled out
+@elems = (4,1,3);
+@subarray = @array[@elems] # same
 
 # split
 ($t, $t, $token) = split (/ /, $line);
