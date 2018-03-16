@@ -25,7 +25,7 @@ my @array = (1, 2, 3, "this is an element: ${element}");
 my $val = $array[3];
 my ($login, $passwd) = split(/:/);
 
-# subroutine
+# subroutine and elsif
 sub strip_put {
   my $line = shift;
   # if not enabled, just return unchanged
@@ -40,6 +40,18 @@ sub strip_put {
   } else {}
   return $line;
 }
+
+for (my $i=0; $i <= 9; $i++) {
+   print "$i\n";
+}
+
+# $#array
+for (my $i = 0; $i <= $#array; $i++) {
+  print ("element $i: $array[$i]\n")
+}
+
+# array slices
+@subarray = @array[0..19] # first 20 elements
 
 # split
 ($t, $t, $token) = split (/ /, $line);
