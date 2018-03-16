@@ -55,6 +55,7 @@ for (my $i = 0; $i <= $#array; $i++) {
 @subarray = @array[4,1,3] # 3 of the elements pulled out
 @elems = (4,1,3);
 @subarray = @array[@elems] # same
+@array[1,2] = @array[2,1] # swap two elements
 
 # split
 ($t, $t, $token) = split (/ /, $line);
