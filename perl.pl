@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 my $line = <STDIN>;
 print $line;
+chop ($line);
 
 open (my $fh, "<", $file)
   or die "Could not open file $file";
@@ -24,6 +25,7 @@ my @array = (1, 2, 3, "this is an element: ${element}");
 @array = split (/ /, $line);
 my $val = $array[3];
 my ($login, $passwd) = split(/:/);
+my $joined = join (',', @csv, $h, $d, $m);
 
 # subroutine and elsif
 sub strip_put {
