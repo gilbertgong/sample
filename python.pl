@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 import json
 
 print ("hello, world")
@@ -25,27 +24,18 @@ for k in mydict:
     else:
         pass # do nothing here
 
-print_collection(mydict, "\n\nmydict:")
 # set
 literal_set = {"apple", "banana", "hello", "world"}
 myset = set()
 myset.add("strawberry")
-myset.add("pineapple")
-
-print_collection(literal_set,"\n\nliteral_set:")
-print_collection(myset, "\n\nmyset:")
 
 # list
 literal_list = ['a', 'b', 'c', 'd']
 mylist = list()
 mylist.append('e')
-mylist.append('f')
-print_collection (literal_list, "\n\nliteral_list:")
-print_collection (mylist, "\n\nmylist:")
 
 # tuple, which is immutable
 literal_tuple = ("apple", "banana", "cherry")
-print_collection(literal_tuple, "\n\nliteral_tuple:")
 
 # range, reversed
 for i in range(10, 0, -1):
@@ -57,7 +47,6 @@ print_collection(reversed(mylist), "\n\nmylist reversed:")
 #split
 txt = "welcome to the jungle"
 txt_split = txt.split()
-print(txt_split)
 
 # files
 f = open("demofile.txt", "w")
@@ -72,10 +61,17 @@ print(f.read())
 # logic - is checks mem address
 if ("a" is not None):
     print ("a is not None")
-
 if ("a" == "b"):
     pass
 elif ("a" != "a" or "a" is "a"):
     print ("a is a")
 else:
     print ("a is b")
+
+print_collection(mydict, "\n\nmydict:")
+print_collection(literal_set,"\n\nliteral_set:")
+print_collection(myset, "\n\nmyset:")
+print_collection (literal_list, "\n\nliteral_list:")
+print_collection (mylist, "\n\nmylist:")
+print_collection(literal_tuple, "\n\nliteral_tuple:")
+print(txt_split)
