@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 import json
+greeting = "Hello, world"
 
-print ("hello, world")
+print (f"{greeting} is the first program in any language")
 
 def print_collection(collection_arg, header = ""):
     print (header)
